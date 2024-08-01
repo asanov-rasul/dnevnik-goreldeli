@@ -139,6 +139,10 @@ th, td {
 .avatar {
     width: 120px;
     height: 160px;
+    -webkit-box-shadow: -15px 15px 36px -15px rgba(0,0,0,0.75);
+    -moz-box-shadow: -15px 15px 36px -15px rgba(0,0,0,0.75);
+    box-shadow: -15px 15px 36px -15px rgba(0,0,0,0.75);
+    border-radius: 10px;
 }
 
 .grade_block {

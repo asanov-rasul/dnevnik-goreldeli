@@ -15,8 +15,8 @@ const objParents = {
         login: 'SadykovSelim',
         password: 'goreldeli'
     },
-    SadykovEmir: {
-        login: 'SadykovEmir',
+    SadykovEmin: {
+        login: 'SadykovEmin',
         password: 'goreldeli'
     },
     GurbanovArslan: {

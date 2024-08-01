@@ -59,7 +59,7 @@ form img {
     cursor: pointer;
 }
 
-.password_close {
+.password_open {
     width: 35px;
     height: 25px;
     right: 13px;
@@ -116,7 +116,7 @@ button {
         padding: 60px 50px 50px 50px;
     }
 
-    img {
+    .logo {
         width: 45%;
         margin-bottom: 35px;
     }
