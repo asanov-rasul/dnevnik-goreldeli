@@ -1,7 +1,9 @@
 const btn = document.querySelector('.login'),
       inputLogin = document.querySelector('.input_login'),
       inputPassword = document.querySelector('.input_password'),
-      errorPassword = document.querySelector('.error_password');
+      errorPassword = document.querySelector('.error_password'),
+      passwordOpenIcon = document.querySelector('.password_open'),
+      passwordCloseIcon = document.querySelector('.password_close');
 
 
 const objParents = {
@@ -83,4 +85,18 @@ btn.addEventListener('click', (e)=> {
             }
         }
     }
+})
+
+console.log(inputPassword.type)
+
+passwordCloseIcon.addEventListener('click', () => {
+    inputPassword.type = 'password';
+    passwordCloseIcon.style.display = 'none'
+    passwordOpenIcon.style.display = 'block'
+})
+
+passwordOpenIcon.addEventListener('click', () => {
+    inputPassword.type = 'text';
+    passwordCloseIcon.style.display = 'block'
+    passwordOpenIcon.style.display = 'none'
 })

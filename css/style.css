@@ -28,7 +28,7 @@ main {
     box-shadow: 0px 9px 17px -3px rgba(111,127,91,1);
 }
 
-img {
+.logo {
     width: 45%;
     margin-bottom: 50px;
 }
@@ -42,11 +42,29 @@ h2 {
 }
 
 form {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+}
+
+form img {
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    right: 15px;
+    bottom: 46%;
+    cursor: pointer;
+}
+
+.password_close {
+    width: 35px;
+    height: 25px;
+    right: 13px;
+    bottom: 45%;
+    display: none;
 }
 
 input {
