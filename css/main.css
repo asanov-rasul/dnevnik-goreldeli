@@ -118,7 +118,7 @@ ul li a {
 
 table {
     width: 90%;
-    overflow-x: scroll;
+    overflow: scroll;
 }
 
 table, th, tr, td {
