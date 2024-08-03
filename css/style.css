@@ -64,6 +64,9 @@ form img {
     height: 25px;
     right: 13px;
     bottom: 45%;
+}
+
+.password_close {
     display: none;
 }
 

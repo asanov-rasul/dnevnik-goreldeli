@@ -13,60 +13,14 @@ const btns = document.querySelectorAll('.btn_item'),
       tableRead = document.querySelector('.table_read'),
       tableAwia = document.querySelector('.table_awia'),
       tableRobbo = document.querySelector('.table_awia'),
-      td = document.querySelectorAll('td'),
-      gradeBlock = document.querySelector('.grade_block');
+      td = document.querySelectorAll('td');
 
 
-const gradesBlockHtml = `
-            <ul>
-                <li>НБ</li>
-                <li>5</li>
-                <li>4</li>
-                <li>3</li>
-                <li>2</li>
-                <li></li>
-            </ul>`
 
 if (localStorage.getItem('login') == 'camp'){
-    gradeBlock.innerHTML = gradesBlockHtml;
-
-    const grades = gradeBlock.querySelectorAll('li');
-
     avatars.forEach(avatar => {
         avatar.classList.add('hide')
     })
-
-
-    // Обработчик клика для элементов grades
-const handleGradeClick = (targetItem) => {
-    return (event) => {
-        targetItem.innerHTML = event.target.innerHTML;
-        gradeBlock.classList.remove('flex');
-    };
-};
-
-// Добавляем обработчики кликов для элементов grades только один раз
-grades.forEach(grade => {
-    grade.addEventListener('click', (event) => {
-        // Используем текущий элемент td, в который нужно поставить оценку
-        const targetItem = document.querySelector('.selected-td');
-        if (targetItem) {
-            handleGradeClick(targetItem)(event);
-        }
-    });
-});
-
-td.forEach(item => {
-    item.addEventListener('click', (e) => {
-        gradeBlock.classList.add('flex');
-        gradeBlock.style.left = window.scrollX + item.getBoundingClientRect().left - gradeBlock.offsetHeight + 'px';
-        gradeBlock.style.top = window.scrollY + item.getBoundingClientRect().bottom - gradeBlock.offsetHeight - item.offsetHeight - 5 + 'px';
-        
-        // Снимаем выделение с предыдущих ячеек и добавляем класс текущей ячейке
-        document.querySelectorAll('.selected-td').forEach(td => td.classList.remove('selected-td'));
-        item.classList.add('selected-td');
-    });
-});
 }
 
 

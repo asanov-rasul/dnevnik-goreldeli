@@ -67,6 +67,7 @@ const objParents = {
         login: 'BarabashovAlan',
         password: 'goreldeli'
     },
+
 }
 
 btn.addEventListener('click', (e)=> {
@@ -78,16 +79,18 @@ btn.addEventListener('click', (e)=> {
                 window.location.href = "main.html";
                 errorPassword.classList.remove('show');
                 errorPassword.classList.add('hide');
+                passwordOpenIcon.style.bottom = '45%'
+                passwordCloseIcon.style.bottom = '46%'
                 break;
             } else {
                 errorPassword.classList.add('show')
                 errorPassword.classList.remove('hide')
+                passwordOpenIcon.style.bottom = '60%'
+                passwordCloseIcon.style.bottom = '61%'
             }
         }
     }
 })
-
-console.log(inputPassword.type)
 
 passwordCloseIcon.addEventListener('click', () => {
     inputPassword.type = 'password';
